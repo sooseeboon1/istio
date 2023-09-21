@@ -4,7 +4,7 @@ LABEL maintainer="bhardwaj@rbbn.com"
 # Copy the files
 COPY target/*.jar /home/aaclient.jar
 
-# Change the workdir
+# ssoo: Change the workdir
 WORKDIR /home
 
 #CMD tail -f /dev/null

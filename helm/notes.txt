@@ -5,5 +5,6 @@ Local istio setup
 
 2) kubectl port-forward service/ssootest-aaclient 8088:8080  <-- Port forward to my service
    kubectl port-forward service/kiali 20001:20001 -n istio-system <-- Port forward to kiali
-   kubectl port-forward service/istio-ingressgateway 8888:80 -n istio-ingress <-- Port forward to istio gateway
+   kubectl port-forward service/istio-ingressgateway 8888:80 -n istio-ingress <-- Port forward to istio gateway (istio gateway is listen on port 80)
  
+3) To test aaclient: Send http get to: http://localhost:8888/hello
