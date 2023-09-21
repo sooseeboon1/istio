@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  labels:
+    app: mygateway
+  name: mygateway
+  namespace: default
+spec:
+  selector:
+    istio: ingressgateway #istio gateway pod labe
+  servers:
+  - hosts:
+    - '*'
+    port:
+      name: http
+      number: 80
+      protocol: HTTP
+    tls: {}
