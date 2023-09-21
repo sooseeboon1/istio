@@ -1,5 +1,5 @@
 apiVersion: networking.istio.io/v1beta1
-kind: Gateway
+kind: Gateway # This is how we confiugre istio gateway
 metadata:
   labels:
     app: mygateway
@@ -7,9 +7,9 @@ metadata:
   namespace: default
 spec:
   selector:
-    istio: ingressgateway #istio gateway pod labe
+    istio: ingressgateway #istio gateway pod labe(This link to gateway pod label)
   servers:
-  - hosts:
+  - hosts: # This section configure gateway. Istio gateway is listening on port 80
     - '*'
     port:
       name: http

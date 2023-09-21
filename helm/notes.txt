@@ -1,0 +1,9 @@
+Local istio setup
+1) 2 namespaces for istio
+   a) istio-system <-- kiali/grafana service etc..
+   b) istio-ingress <-- Gateway pod, gateway service, etc..
+
+2) kubectl port-forward service/ssootest-aaclient 8088:8080  <-- Port forward to my service
+   kubectl port-forward service/kiali 20001:20001 -n istio-system <-- Port forward to kiali
+   kubectl port-forward service/istio-ingressgateway 8888:80 -n istio-ingress <-- Port forward to istio gateway
+ 
